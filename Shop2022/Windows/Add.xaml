@@ -1,0 +1,39 @@
+﻿<Window x:Class="Shop2022.Windows.Add"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Shop2022.Windows"
+        mc:Ignorable="d"
+        Title="ДобавлениеТовара" FontSize="22" FontFamily="Comic Sans MS" Height="950" Width="450" Icon="/Shop2022;component/image/icon.ico">
+    <Grid>
+        <StackPanel Orientation="Vertical"  HorizontalAlignment="Center">
+            <Label HorizontalAlignment="Center" Margin="10">Добавление</Label>
+            <Label HorizontalAlignment="Center" Margin="10">Артикул</Label>
+            <TextBox x:Name="articleElem" ></TextBox>
+            <Label HorizontalAlignment="Center" Margin="10">Наименование</Label>
+            <TextBox x:Name="productnameElem"></TextBox>
+            <Label HorizontalAlignment="Center" Margin="10">Описание</Label>
+            <TextBox x:Name="descripElem"></TextBox>
+            <Label HorizontalAlignment="Center" Margin="10">Категория</Label>
+
+            <ComboBox x:Name="categoryElem">
+            <ComboBoxItem>Общестроительные материалы</ComboBoxItem>
+            <ComboBoxItem>Стеновые и фасадные материалы</ComboBoxItem>
+            <ComboBoxItem>Сухие строительные смеси и гидроизоляция</ComboBoxItem>
+            <ComboBoxItem>Ручной инструмент</ComboBoxItem>
+            <ComboBoxItem>Защита лица, глаз, головы</ComboBoxItem>
+            </ComboBox>
+            <Label HorizontalAlignment="Center" Margin="10">Производитель</Label>
+            <TextBox x:Name="manufElem"></TextBox>
+            <Label HorizontalAlignment="Center" Margin="10">Цена</Label>
+            <TextBox x:Name="costElem"></TextBox>
+            <Label HorizontalAlignment="Center" Margin="10">Скидка</Label>
+            <TextBox x:Name="discountElem"></TextBox>
+            <Label HorizontalAlignment="Center" Margin="10">Остаток на складе</Label>
+            <TextBox x:Name="quantElem"></TextBox>
+            <Button Margin="30" Height="40" Width="150" Click="Button_Click">Добавить</Button>
+        </StackPanel>
+        <Image Width="50" Height="50" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10" Source="/Shop2022;component/image/logo.png"></Image>
+    </Grid>
+</Window>

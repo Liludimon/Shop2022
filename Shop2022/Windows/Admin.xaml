@@ -1,0 +1,42 @@
+﻿<Window x:Class="Shop2022.Windows.Admin"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Shop2022.Windows"
+        mc:Ignorable="d"
+        Title="Администратор" Icon="/Shop2022;component/image/icon.ico" Height="800" Width="1600" FontSize="22" FontFamily="Comic Sans MS" >
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="80"/>
+            <RowDefinition/>
+            <RowDefinition Height="60"/>
+        </Grid.RowDefinitions>
+        <Label Grid.Row="0" HorizontalAlignment="Center">Товары</Label>
+            <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center">
+            <Button Margin="10" Click="Button_Click_1">Добавить</Button>
+            <Button Margin="10" Click="Button_Click">Редактировать</Button>
+            <Button Margin="10" Click="Button_Click_2">Удалить</Button>
+        </StackPanel>
+        <DataGrid x:Name="productElem" Grid.Row="2">
+            <DataGrid.Columns>
+                <DataGridTextColumn Width="150" Header="Артикул" Binding="{Binding ProductArticleNumber}"/>
+                <DataGridTextColumn Width="300"  Header="Наименование" Binding="{Binding ProductName}"/>
+                <DataGridTextColumn Width="250" Header="Описание" Binding="{Binding ProductDescription}"/>
+                <DataGridTextColumn Width="180" Header="Категория" Binding="{Binding ProductCategory}"/>
+                <DataGridTextColumn Width="200" Header="Производитель" Binding="{Binding ProductManufacturer}"/>
+                <DataGridTextColumn Width="150" Header="Цена" Binding="{Binding ProductCost}"/>
+                <DataGridTextColumn Width="140" Header="Скидка" Binding="{Binding ProductDiscountAmount}"/>
+                <DataGridTextColumn Width="220" Header="Остатки на складе" Binding="{Binding ProductQuantityInStock}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Image Grid.Row="0" HorizontalAlignment="Left" Margin="10" Source="/Shop2022;component/image/logo.png"></Image>
+        <Label x:Name="fioElem" VerticalAlignment="Top"
+               HorizontalAlignment="Right"
+               >
+            Фамилия Имя Отчество
+        </Label>
+        <Button Grid.Row="3" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="10" Height="40" Width="100" Click="Button_Click_3">Выйти</Button>
+    </Grid>
+</Window>
